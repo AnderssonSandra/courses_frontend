@@ -18,7 +18,7 @@ window.addEventListener('load', getCourses, false);
 //Show courses
 function getCourses() {
     coursesContainer.innerHTML = '';
-
+    //show courses with GET
     fetch('http://localhost/moment5/backend/api.php', {
         method: 'GET',
     })
@@ -46,6 +46,7 @@ function getCourses() {
             `
         })
     })
+    //send message if error
     .catch(err => {
         console.log(err)
         coursesContainer.innerHTML = `<p id="errorMsg">Lägg till kurser för att se några kurser här</p>`;
@@ -54,16 +55,18 @@ function getCourses() {
 
 //add course
 function addCourse() {
-    //variables
+    //value from form
     let code = codeInput.value;
     let name = nameInput.value;
     let progression = progressionInput.value;
     let syllabus = syllabusInput.value;
-
-    console.log(code);
     
+    //create course with POST
     fetch('http://localhost/moment5/backend/api.php', {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
             'code': code, 
             'name': name, 
@@ -75,12 +78,14 @@ function addCourse() {
         .then(data => {
             getCourses();
         })
+        //send message if error
         .catch(err => {
             console.log(err)
             errorContainer.innerHTML = `<p id="errorMsg">Kunde inte lägga till kurs</p>`;
         })
 }
 
+//delete course
 function deleteCourse($id) {
     fetch('http://www.localhost/moment5/backend/api.php?id=' + $id, {
         mode: 'cors',
@@ -91,7 +96,7 @@ function deleteCourse($id) {
     })
     .then(response => response.json())
     .then (data => {
-        //gör nytt anrop för att hämta kurser för att updatera sidan
+        //get courses again to update
         getCourses()
     })
     .catch((err) => console.log(err));
