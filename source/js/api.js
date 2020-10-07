@@ -19,7 +19,7 @@ window.addEventListener('load', getCourses, false);
 function getCourses() {
     coursesContainer.innerHTML = '';
     //show courses with GET
-    fetch('http://localhost/moment5/backend/api.php', {
+    fetch('http://studenter.miun.se/~saan1906/writeable/dt173g/backend/api.php', {
         method: 'GET',
     })
     .then(response => {
@@ -62,7 +62,7 @@ function addCourse() {
     let syllabus = syllabusInput.value;
     
     //create course with POST
-    fetch('http://localhost/moment5/backend/api.php', {
+    fetch('http://studenter.miun.se/~saan1906/writeable/dt173g/backend/api.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ function addCourse() {
 
 //delete course
 function deleteCourse($id) {
-    fetch('http://www.localhost/moment5/backend/api.php?id=' + $id, {
+    fetch('http://studenter.miun.se/~saan1906/writeable/dt173g/backend/api.php?id=' + $id, {
         mode: 'cors',
         headers: {
             'Access-Control-Allow-Origin': '*'
