@@ -1,0 +1,22 @@
+.btn {
+    @include btn;
+}
+
+.content-container {
+    @include standard-container;
+    padding: 2em 0;
+}
+
+.read-more {
+    color: $dark-pink;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6em;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#error-div {
+    @include standard-container;
+}

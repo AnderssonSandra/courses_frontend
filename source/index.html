@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 5-Mina kurser</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/2c9b326388.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Mina kurser</h1>
+    </header>
+    <section id="container">
+        <article class="content-container">
+            <h1>Kurser jag läst</h1>
+            <div id="course-container">
+                <!--Här kommer kurserna synas-->
+            </div>
+        </article>
+        <article class="content-container" id="add-courses">
+            <h1>Lägg till kurs</h1>
+            <form method="get" id="courseform" name="courseform">
+                <label for="name">Kursnamn</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="code">Kurskod</label><br>
+                <input type="text" id="code" name="code">
+                <label for="progression">Nivå</label><br>
+                <input type="text" id="progression" name="progression">
+                <label for="syllabus">Kursplan</label><br>
+                <input type="text" id="syllabus" name="progression">
+                <input class="btn" type="submit" id="addBtn" form="courseform" value="Lägg till">
+            </form>
+            <div id="error-div">
+                <!--här kommer felmeddelandet-->
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p id="footer-text">Mina kurser lästa på Mittuniversitetet</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/*Fonts*/
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+li, 
+a
+{
+    font-family: $specialFont;
+}
+
+p, 
+span,
+label,
+th,
+td
+{
+    font-family: $basicFont;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+    color: $dark-pink;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: $pink;
+}
+
+h3 {
+    font-size: 1.6em;
+    color: $dark-red;
+}
+
+p,
+a {
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+#header-title {
+    font-size: 7em;
+    color: $dark-pink;
+    padding: 1.5em 0;
+    box-sizing: border-box;
+}
+
+#footer-text {
+    font-family: $specialFont;
+    font-size: 2em;
+    font-weight: bold;
+    color: $dark-red;
+    padding: 2em 0 0 0;
+    text-align: center;
+}
+
+#errorMsg{
+    font-size: 1.5em;
+    color: $pink;
+    font-family: $specialFont;
+    text-align: center;
+}
+
+//responsive design for tablets
+@include tablet {
+    #header-title {
+        font-size: 6em;
+    }
+}
+
+//responsive design for phones
+@include phone {
+    #header-title {
+        font-size: 3em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #footer-text {
+        font-size: 1.6em;
+        padding: 1em 0 0 0;
+    }
+}

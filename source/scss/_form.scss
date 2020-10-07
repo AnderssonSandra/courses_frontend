@@ -1,0 +1,30 @@
+form {
+    width: 60%;
+    margin: auto;
+    input {
+        width: 100%;
+        font-family: $basicFont;
+        margin: 0.5em auto;
+        border: 1px solid $black;
+        border-radius: 2px;
+        padding: 1em;
+        font-size: 1.2em;
+    }
+    label {
+        font-size: 1.4em;
+    }
+}
+
+//responsive design for tablets
+@include tablet {
+    form {
+        width: 80%;
+    }
+}
+
+//responsive design for phones
+@include phone {
+    form {
+        width: 96%;
+    }
+}

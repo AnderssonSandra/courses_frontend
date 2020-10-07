@@ -1,0 +1,23 @@
+header {
+    @include standard-container;
+    height: 400px;
+    background-color: $pink;
+    border-bottom: 10px solid $dark-pink;
+}
+
+footer {
+    @include standard-container;
+    height: 200px;
+    background-color: $pink;
+    border-top: 10px solid $dark-pink;
+}
+
+@include phone {
+    header {
+        height: 200px;
+    }
+
+    footer {
+        height: 120px;
+    }
+}
